@@ -5,12 +5,28 @@ function fib(n) {
   } else {
     return fib(n - 1) + fib(n - 2);
   }
-
 }
 fib();
 
 //2) Функция. Принимает массив строк. Должна вернуть массив результатов проверки двух строк. Если у одной строки с последующей первый и последний символы, то true. Например ["asd", "afffd", "cc", "kk"]. Для такого массива функция должна вернуть [true, false, false]
 
+function makeNewArr(arr) {
+  let result = [];
+
+  for (let i = 0; i < (arr.length - 1); i++) {
+    let firstValue = arr[i];
+    let secondValue = arr[i + 1];
+
+    if (firstValue[0] == secondValue[0] && firstValue.slice(-1) == secondValue.slice(-1)) {
+      result.push(true);
+    } else {
+      result.push(false)
+    }
+  }
+
+  return result;
+}
+makeNewArr(["asd", "afffd", "cc", "kk"]);
 
 
 //3) Написать функцию, которая принимает целочисленный number и рисует спиральную матрицу NxN, где N - входной параметр.
