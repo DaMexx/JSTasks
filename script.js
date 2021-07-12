@@ -13,15 +13,25 @@ fib();
 //решение через возврат массива
 // let arrFib = [0, 1, 1];
 function fib(n) {
-  let arrFib = [0,1];
+//добавил проверку на 0 и 1
+  if (n == 0) {
+    return [];
+  } else if (n == 1) {
+    return [1];
+  }
+
+  let arrFib = [1,1];
+
+//исправил значение аргументов, тк изначально указал просто число, а не позицию в массиве
   for (let i = 2; i <= n; i++) {
-    let firstNum = i-1;
-    let secondNum = i-2;
+    let firstNum = arrFib[i-1];
+    let secondNum = arrFib[i-2];
     arrFib.push(firstNum + secondNum)
   }
-  return arrFib
+
+  return arrFib;
 }
-console.log(fib(7))
+fib(7);
 
 
 //2) Функция. Принимает массив строк. Должна вернуть массив результатов проверки двух строк. Если у одной строки с последующей первый и последний символы, то true. Например ["asd", "afffd", "cc", "kk"]. Для такого массива функция должна вернуть [true, false, false]
