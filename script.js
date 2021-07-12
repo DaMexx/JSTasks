@@ -48,6 +48,14 @@ makeNewArr(["asd", "afffd", "cc", "kk"]);
 /*Например,
 matrix(3)
 
+//создание новой матрицы
+function makeMatrix(n) {
+  let newMatrix = new Array(n).fill().map(() => Array(n).fill(0));
+  return newMatrix;
+}
+console.log(makeMatrix(5));
+
+
 Ответ:
 1 2 3
 8 9 4
