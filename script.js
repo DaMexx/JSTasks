@@ -23,7 +23,9 @@ function fib(n) {
 }
 console.log(fib(7))
 
+
 //2) Функция. Принимает массив строк. Должна вернуть массив результатов проверки двух строк. Если у одной строки с последующей первый и последний символы, то true. Например ["asd", "afffd", "cc", "kk"]. Для такого массива функция должна вернуть [true, false, false]
+
 
 function makeNewArr(arr) {
   let result = [];
@@ -48,15 +50,15 @@ makeNewArr(["asd", "afffd", "cc", "kk"]);
 /*Например,
 matrix(3)
 
+Ответ:
+1 2 3
+8 9 4
+7 6 5*/
+
+
 //создание новой матрицы
 function makeMatrix(n) {
   let newMatrix = new Array(n).fill().map(() => Array(n).fill(0));
   return newMatrix;
 }
 console.log(makeMatrix(5));
-
-
-Ответ:
-1 2 3
-8 9 4
-7 6 5*/
