@@ -13,19 +13,19 @@ fib();
 //решение через возврат массива
 // let arrFib = [0, 1, 1];
 function fib(n) {
-//добавил проверку на 0 и 1
+  //добавил проверку на 0 и 1
   if (n == 0) {
     return [];
   } else if (n == 1) {
     return [1];
   }
 
-  let arrFib = [1,1];
+  let arrFib = [1, 1];
 
-//исправил значение аргументов, тк изначально указал просто число, а не позицию в массиве
+  //исправил значение аргументов, тк изначально указал просто число, а не позицию в массиве
   for (let i = 2; i <= n; i++) {
-    let firstNum = arrFib[i-1];
-    let secondNum = arrFib[i-2];
+    let firstNum = arrFib[i - 1];
+    let secondNum = arrFib[i - 2];
     arrFib.push(firstNum + secondNum)
   }
 
@@ -65,10 +65,30 @@ matrix(3)
 8 9 4
 7 6 5*/
 
+//Промежуточное решение
 
-//создание новой матрицы
-function makeMatrix(n) {
-  let newMatrix = new Array(n).fill().map(() => Array(n).fill(0));
-  return newMatrix;
+function makeArr(size) {
+  const arr = [];
+
+  for (let i = 0; i < size; i++) {
+    arr.push(new Array(size).fill());
+  }
+  let start = 0
+  let x = 0;
+  let y = 0;
+  let n = size -1;
+  for (let i = 1; i <= size * size; i++) {
+   
+    arr[y][x] = i;
+
+    if (x < n) {//    0.0 0.1 
+      x++;
+    } else if (y < n) {
+      y++;    // 0.2 1.2 
+    } 
+  }
+
+return arr
 }
-console.log(makeMatrix(5));
+
+console.log(makeArr(3))
