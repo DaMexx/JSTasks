@@ -9,6 +9,24 @@ function fib(n) {
 }
 fib();
 
+//Через рекурсию
+
+function fib(n) {
+
+  if (n === 0) {
+    return [];
+  } else if (n === 1) {
+    return [0];
+  } else if (n === 2) {
+    return [0, 1];
+  }
+
+  let arr = fib(n - 1)
+  arr.push(arr[arr.length - 1] + arr[arr.length - 2])
+  return arr
+
+}
+console.log(fib(7));
 
 //решение через возврат массива
 // let arrFib = [0, 1, 1];
