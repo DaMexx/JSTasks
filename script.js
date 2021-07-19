@@ -66,111 +66,28 @@ matrix(3)
 7 6 5*/
 
 
-//создание новой матрицы
-function makeMatrix(n) {
-  let result = new Array(n).fill().map(() => Array(n).fill(''));
+function makeArr(size) {
+  let arr = new Array(size).fill().map(() => Array(size).fill(''));
 
-  for (i = 0; i <= result.length; i++) {
-    if (Array.isArray(result[i])) {
-      result[i]/*.fill(7)*/
+  let x = 0;
+  let y = 0;
+  let n = size - 1;
+
+
+  for (let i = 1; i <= size * size; i++) {
+
+    arr[y][x] = i;
+
+    if (x < n) {//    0.0 0.1 
+      x++;
+    } else if (y < n) {
+      y++;    // 0.2 1.2 
+      /*2.2 2.1*/
     }
+
+
   }
 
-  return result
-}
-
-
-console.log(makeMatrix(3));
-
-let arr = [];
-arr.fill();
-
-
-
-let arr = new Array(3)
-
-
-//черновик
-// let arr = new Array(3)
-// let arrO = new Array(3).fill('')
-// let arr1 = new Array(3).fill('')
-// let arr2 = new Array(3).fill('')
-// arr[0] = arrO
-// arr[1] = arrO
-// arr[2] = arrO
-// for (let i = 1; i <= arr[0].length; i++) {
-//   arr[0][i - 1] = i
-// }
-// for (let i = 1; i <= arr[1].length; i++) {
-//   arr[1][i - 1] = i
-// }
-// for (let i = 1; i <= arr[2].length; i++) {
-//   arr[2][i - 1] = i
-// }
-// console.log(arr)
-
-
-
-
-
-
-//еще способ задать массив
-// function newArr(n) {
-
-//   let arr = new Array(n);
-//   let arrN = new Array(n);
-//   let count = 0
-//   for (let i = 1; i <= arr.length; i++) {
-//     arr[i - 1] = arrN;
-//   }
-
-//   return arr
-// }
-// console.log(newArr(5))
-
-
-function makeArr(length) {
-  let arr = [];
-  for (let i = 0; i <= length; i++) {
-    return arr[i];
-
-  }
-  return arr
-}
-console.log(makeArr(5))
-
-
-
-function newArr(n) {
-
-  let arr = new Array(n);
-  let arrN = new Array(n);
-  let count = 0
-  for (let i = 1; i <= arr.length; i++) {
-    arr[i - 1] = arrN;
-  }
-
-  return arr
-}
-console.log(newArr(3))
-
-
-
-
-
-function makeArr(n) {
-  let = arr = [];
-
-  for (let i = 0; i < n; i++) {
-    arr[i] = Array(n);
-  } 
-
-  for (let i = 0; i < arr.length; i++) {
-    arr[0][i++] = i
-  } 
-
-
-    // arr[1][arr[1].length-1]=i++
 
   return arr
 }
