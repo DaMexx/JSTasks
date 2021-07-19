@@ -21,12 +21,12 @@ function fib(n) {
     return [0, 1];
   }
 
-  let arr = fib(n - 1)
-  arr.push(arr[arr.length - 1] + arr[arr.length - 2])
-  return arr
+  let arr = fib(n - 1);
+  arr.push(arr[arr.length - 1] + arr[arr.length - 2]);
+  return arr;
 
 }
-console.log(fib(7));
+fib();
 
 //решение через возврат массива
 // let arrFib = [0, 1, 1];
